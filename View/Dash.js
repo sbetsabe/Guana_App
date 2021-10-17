@@ -4,13 +4,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Login from "./View/Login/Login";
-import Dash from "./View/Dash";
+import Menu from "../Menu/Menu";
 
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import rootReducer from "./stores/rootReducer";
+import rootReducer from "../stores/rootReducer";
 
 const Stack = createStackNavigator();
 
@@ -21,22 +20,19 @@ const store = createStore(
 
 const App = () => {
   return (
-      <NavigationContainer>
+    <Provider store={store}>
+      {/*<NavigationContainer>*/}
         <Stack.Navigator
           screenOptions={{
             headerShown: false
-          }}
-          initialRouteName={'Login'}>
+          }}>
           <Stack.Screen
-            name="Login"
-            component={Login}
-          />
-          <Stack.Screen
-            name="Dash"
-            component={Dash}
+            name="Menu"
+            component={Menu}
           />
         </Stack.Navigator>
-      </NavigationContainer>
+      {/*</NavigationContainer>*/}
+    </Provider>
   )
 }
 
