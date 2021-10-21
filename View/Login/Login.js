@@ -28,6 +28,7 @@ export default class Login extends Component {
         const { navigation } = this.props;
         return (
             <View style={styles.container}>
+                <Text style={styles.logo}>INICIO DE SESIÓN</Text>
                 <Image source={require('../../assets/logo.png')}
                     style={{ width: 230, height: 170, resizeMode: 'contain' }}
                 />
@@ -49,8 +50,8 @@ export default class Login extends Component {
                         onChangeText={(password) => this.setState({ password })} />
                 </View>
 
-                <TouchableHighlight style={styles.buttonContainer} onPress={() => navigation.navigate("Dash")}>
-                    <Text style={styles.loginText}>ACCEDER</Text>
+                <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => navigation.navigate("Dash")}>
+                    <Text style={styles.loginText}>INICIAR SESIÓN</Text>
                 </TouchableHighlight>
             </View>
         );
@@ -64,14 +65,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'transparent',
     },
-
     logo: {
         fontWeight: "bold",
         fontSize: 21,
-        color: "#000",
+        color: "#000000",
         marginBottom: 40
     },
-
     inputContainer: {
         borderBottomColor: '#000',
         backgroundColor: 'transparent',
@@ -83,21 +82,18 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
-
     inputs: {
         height: 45,
         marginLeft: 16,
         borderBottomColor: '#FFFFFF',
         flex: 1,
     },
-
     inputIcon: {
         width: 20,
         height: 20,
         marginLeft: 15,
         justifyContent: 'center'
     },
-
     buttonContainer: {
         height: 45,
         flexDirection: 'row',
@@ -105,12 +101,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20,
         width: 250,
-        borderRadius: 10,
-        backgroundColor: '#086A87'
+        borderRadius: 30,
     },
-
+    loginButton: {
+        backgroundColor: "#B12929",
+    },
     loginText: {
         color: 'white',
-        fontWeight: 'bold'
     }
 });

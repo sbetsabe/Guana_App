@@ -3,7 +3,7 @@ import React from 'react';
 import { Image, Text, TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
 import menu from '../assets/menu.png';
 import home from '../assets/home.png';
-import Header from '../Components/Header';
+import Header from '../components/Header';
 
 import { connect } from 'react-redux';
 import { setSelectedTab } from '../stores/tab/tabActions';
@@ -11,10 +11,12 @@ import { setSelectedTab } from '../stores/tab/tabActions';
 import Animated from "react-native-reanimated";
 
 import settings from '../assets/settings.png';
+import search from '../assets/search.png';
+import calendar from '../assets/calendar.png';
 
 const Main = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab }) => {
     React.useEffect(() => {
-        setSelectedTab('Inicio')
+        setSelectedTab('Menú Principal')
     }, [])
     return (
         <Animated.View style={{
@@ -69,6 +71,30 @@ const Main = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab })
                 flex: 1
             }}>
                 <TouchableOpacity onPress={() => {
+                    setSelectedTab('Buscar Horas');
+                    navigation.navigate('Search');
+                }}>
+                    <View>
+                        <View style={styles.container}>
+                            <Text style={styles.textCard}>Buscar horas</Text>
+                            <Image style={styles.image} source={search}/>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => {
+                    setSelectedTab('Horas Trabajadas');
+                    navigation.navigate('Hours');
+                }}>
+                    <View>
+                        <View style={styles.container}>
+                            <Text style={styles.textCard}>Horas trabajadas</Text>
+                            <Image style={styles.image} source={calendar}/>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => {
                     setSelectedTab('Ajustes');
                     navigation.navigate('Setting');
                 }}>
@@ -107,7 +133,7 @@ const deviceWidth = Math.round(Dimensions.get('window').width);
 const styles = StyleSheet.create({
     container: {
         width: deviceWidth - 65,
-        backgroundColor: '#086A87',
+        backgroundColor: '#B12929',
         height: 150,
         borderRadius: 20,
         margin: 10,

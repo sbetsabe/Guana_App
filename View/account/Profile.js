@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Image, Text, TouchableOpacity, View } from 'react-native';
 import menu from '../../assets/menu.png';
 import home from '../../assets/home.png';
-import Header from '../../Components/Header';
+import Header from '../../components/Header';
 
 import { connect } from 'react-redux';
 import { setSelectedTab } from '../../stores/tab/tabActions'; 
@@ -76,12 +76,12 @@ const Profile = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab
                             resizeMode="contain"
                             style={styles.photoProfile}
                     />
-                    <Text style={styles.nameText}>Hellen Rosales</Text>
+                    <Text style={styles.nameText}>Jose Centeno</Text>
                 </View>
                 <Text style={styles.textInfo}>N° de empleado</Text>
                     <Text style={{ color:"black", fontSize:16}}>5421</Text>
                     <Text style={styles.textInfo}>Correo electrónico</Text>
-                    <Text style={{ color:"black", fontSize:16}}>hellen.rosales@gmail.com</Text>
+                    <Text style={{ color:"black", fontSize:16}}>ejemplo1234@gmail.com</Text>
             </View>    
             </View>
 
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     container:{
         height:"45%",
         width:350,
-        backgroundColor:"#086A87",
+        backgroundColor:"#B12929",
         borderRadius:21,
         elevation:3,
         alignContent:"center",

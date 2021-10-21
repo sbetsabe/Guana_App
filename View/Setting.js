@@ -3,7 +3,7 @@ import React from 'react';
 import { Image, Text, TouchableOpacity, View, StyleSheet, Alert } from 'react-native';
 import menu from '../assets/menu.png';
 import home from '../assets/home.png';
-import Header from '../Components/Header';
+import Header from '../components/Header';
 
 import { connect } from 'react-redux';
 import { setSelectedTab } from '../stores/tab/tabActions';
