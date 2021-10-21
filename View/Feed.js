@@ -71,25 +71,25 @@ const Feed = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab })
                 flex: 1
             }}>
                 <TouchableOpacity onPress={() => {
-                    setSelectedTab('Buscar Horas');
-                    navigation.navigate('Search');
+                    setSelectedTab('Lista de deseos');
+                    navigation.navigate('Wishlist');
                 }}>
                     <View>
                         <View style={styles.container}>
-                            <Text style={styles.textCard}>Buscar horas</Text>
-                            <Image style={styles.image} source={search}/>
+                            <Text style={styles.textCard}>Lista de deseos</Text>
+                            <Image style={styles.image} source={calendar}/>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => {
-                    setSelectedTab('Horas Trabajadas');
-                    navigation.navigate('Hours');
+                    setSelectedTab('Pedidos');
+                    navigation.navigate('Order');
                 }}>
                     <View>
                         <View style={styles.container}>
-                            <Text style={styles.textCard}>Horas trabajadas</Text>
-                            <Image style={styles.image} source={calendar}/>
+                            <Text style={styles.textCard}>Pedidos</Text>
+                            <Image style={styles.image} source={search}/>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -133,7 +133,7 @@ const deviceWidth = Math.round(Dimensions.get('window').width);
 const styles = StyleSheet.create({
     container: {
         width: deviceWidth - 65,
-        backgroundColor: '#B12929',
+        backgroundColor: '#0684ba',
         height: 150,
         borderRadius: 20,
         margin: 10,

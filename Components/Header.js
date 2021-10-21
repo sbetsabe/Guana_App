@@ -18,7 +18,7 @@ const Header = ({ containerStyle, title, leftComponent, rightComponent }) => {
                 }}
             >
                 
-                <Text style={{ color: '#B12929', fontWeight:"bold" }}>{title}</Text>
+                <Text style={{ color: '#0684ba', fontWeight:"bold" }}>{title}</Text>
             </View>
             {rightComponent}
         </View>

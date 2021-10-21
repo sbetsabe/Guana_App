@@ -30,12 +30,12 @@ export default class Login extends Component {
             <View style={styles.container}>
                 <Text style={styles.logo}>INICIO DE SESIÓN</Text>
                 <Image source={require('../../assets/logo.png')}
-                    style={{ width: 230, height: 170, resizeMode: 'contain' }}
+                    style={{ width: 230, height: 170, resizeMode: 'contain', marginBottom: 25 }}
                 />
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/ios-filled/24/000000/email.png' }} />
                     <TextInput style={styles.inputs}
-                        placeholder="Número de Empleado"
+                        placeholder="Email"
                         keyboardType="email-address"
                         underlineColorAndroid='transparent'
                         onChangeText={(email) => this.setState({ email })} />
@@ -51,7 +51,7 @@ export default class Login extends Component {
                 </View>
 
                 <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => navigation.navigate("Dash")}>
-                    <Text style={styles.loginText}>INICIAR SESIÓN</Text>
+                    <Text style={styles.loginText}>ACCEDER</Text>
                 </TouchableHighlight>
             </View>
         );
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     logo: {
         fontWeight: "bold",
         fontSize: 21,
-        color: "#000000",
+        color: "#0684ba",
         marginBottom: 40
     },
     inputContainer: {
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         borderRadius: 30,
         borderBottomWidth: 1,
-        width: 250,
+        width: 320,
         height: 45,
         marginBottom: 20,
         flexDirection: 'row',
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         height: 45,
         marginLeft: 16,
         borderBottomColor: '#FFFFFF',
-        flex: 1,
+        flex: 1
     },
     inputIcon: {
         width: 20,
@@ -100,13 +100,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 20,
-        width: 250,
-        borderRadius: 30,
+        width: 150,
+        borderRadius: 15,
     },
     loginButton: {
-        backgroundColor: "#B12929",
+        backgroundColor: "#0684ba",
     },
     loginText: {
         color: 'white',
+        fontWeight: 'bold'
     }
 });

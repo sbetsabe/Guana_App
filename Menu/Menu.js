@@ -11,7 +11,7 @@ import settings from '../assets/settings.png';
 import logout from '../assets/logout.png';
 
 import Feed from "../View/Feed";
-import Search from "../View/Search";
+import Order from "../View/Order";
 import Wishlist from "../View/Wishlist";
 import Setting from "../View/Setting";
 import Profile from "../View/account/Profile";
@@ -120,12 +120,12 @@ const CustomDrawerContent = ({ navigation, selectedTab, setSelectedTab }) => {
                             navigation.navigate('Wishlist');
                         }} />
                     <CustomDrawerItem
-                        label={'Buscar Horas'}
+                        label={'Pedidos'}
                         icon={search}
-                        isFocused={selectedTab == 'Buscar Horas'}
+                        isFocused={selectedTab == 'Pedidos'}
                         onPress={() => {
-                            setSelectedTab('Buscar Horas');
-                            navigation.navigate('Search');
+                            setSelectedTab('Pedidos');
+                            navigation.navigate('Order');
                         }} />
                     <CustomDrawerItem
                         label={'Ajustes'}
@@ -169,7 +169,7 @@ const Menu = ({ selectedTab, setSelectedTab }) => {
 
     return (
         <View style={{
-            flex: 1, backgroundColor: "#B12929"
+            flex: 1, backgroundColor: "#0684ba"
         }}>
             <Drawer.Navigator
                 drawerType="slide"
@@ -182,7 +182,7 @@ const Menu = ({ selectedTab, setSelectedTab }) => {
                 sceneContainerStyle={{
                     backgroundColor: 'transparent'
                 }}
-                initianRouteName="Main"
+                initianRouteName="Feed"
                 drawerContent={props => {
                     setTimeout(() => {
                         setProgress(props.progress);
@@ -203,8 +203,8 @@ const Menu = ({ selectedTab, setSelectedTab }) => {
                     {props => (<Wishlist {...props}
                         drawerAnimationStyle={animatedStyle} />)}
                 </Drawer.Screen>
-                <Drawer.Screen name="Search">
-                    {props => (<Search {...props}
+                <Drawer.Screen name="Order">
+                    {props => (<Order {...props}
                         drawerAnimationStyle={animatedStyle} />)}
                 </Drawer.Screen>
                 <Drawer.Screen name="Setting">

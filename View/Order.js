@@ -59,9 +59,9 @@ const list = [
     }
 ]
 
-const Search = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab }) => {
+const Order = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab }) => {
     React.useEffect(() => {
-        setSelectedTab('Buscar Horas')
+        setSelectedTab('Pedidos')
     }, [])
     return (
         <Animated.View style={{
@@ -162,4 +162,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Order);

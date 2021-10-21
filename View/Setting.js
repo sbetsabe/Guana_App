@@ -75,7 +75,7 @@ const Setting = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab
                             resizeMode="contain"
                             style={styles.photoProfile}
                         />
-                        <Text style={styles.nameText}>Jose Centeno</Text>
+                        <Text style={styles.nameText}>Hellen Mora</Text>
                     </View>
                     <Text style={styles.textInfo}>N° de empleado</Text>
                     <Text style={{ color: "black", fontSize: 16 }}>5421</Text>
@@ -116,20 +116,20 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         borderWidth: 2,
         borderRadius: 10,
-        borderColor: '#B12929',
+        borderColor: '#0684ba',
         padding: 1
     },
 
     textTitle: {
         fontSize: 25,
-        color: '#B12929',
+        color: '#0684ba',
         marginTop: 30,
         fontWeight: 'bold',
         textAlign: 'center'
     },
 
     textInput: {
-        borderColor: '#B12929',
+        borderColor: '#0684ba',
         borderWidth: 1,
         borderRadius: 10,
         width: 300,
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: '#B12929',
+        backgroundColor: '#0684ba',
         borderRadius: 10,
         padding: 15,
         marginTop: 10
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     container: {
         height: "45%",
         width: 350,
-        backgroundColor: "#B12929",
+        backgroundColor: "#0684ba",
         borderRadius: 21,
         elevation: 3,
         alignContent: "center",
