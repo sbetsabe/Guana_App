@@ -16,46 +16,22 @@ import { ListItem } from 'react-native-elements'
 
 const list = [
     {
-        month: 'Septiembre',
-        date: '30/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
+        product: 'Blusa de encaje',
+        price: '7500',
+        send: 'Gratis',
+        style: 'Talla: S - Color: Rojo'
     },
     {
-        month: 'Septiembre',
-        date: '29/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
+        product: 'Bloomer',
+        price: '2500',
+        send: '500 CRC',
+        style: 'Talla: M - Color: Negro'
     },
     {
-        month: 'Septiembre',
-        date: '28/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
-    },
-    {
-        month: 'Septiembre',
-        date: '27/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
-    },
-    {
-        month: 'Septiembre',
-        date: '26/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
-    },
-    {
-        month: 'Septiembre',
-        date: '25/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
-    },
-    {
-        month: 'Septiembre',
-        date: '24/09/2021',
-        start: '8:00 am',
-        end: '5:00 pm'
+        product: 'Jeans blue',
+        price: '12500',
+        send: '1400',
+        style: 'Talla: 9 - Color: Azul'
     }
 ]
 
@@ -126,9 +102,10 @@ const Wishlist = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTa
                                         height: 20
                                     }} />
                                 <ListItem.Content>
-                                    <ListItem.Title>{l.month}</ListItem.Title>
-                                    <ListItem.Subtitle>Fecha: {l.date}</ListItem.Subtitle>
-                                    <ListItem.Subtitle>Hora Entrada: {l.start} - Hora Salida: {l.end}</ListItem.Subtitle>
+                                    <ListItem.Title>{l.product}</ListItem.Title>
+                                    <ListItem.Subtitle>Precio: {l.price} CRC</ListItem.Subtitle>
+                                    <ListItem.Subtitle>Envio: {l.send}</ListItem.Subtitle>
+                                    <ListItem.Subtitle>Estilo: {l.style}</ListItem.Subtitle>
                                 </ListItem.Content>
                             </ListItem>
                         ))

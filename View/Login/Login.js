@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     inputs: {
         height: 45,
         marginLeft: 16,
-        borderBottomColor: '#FFFFFF',
+        borderBottomColor: '#fff',
         flex: 1
     },
     inputIcon: {
@@ -105,9 +105,17 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         backgroundColor: "#0684ba",
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 5,
+            height: 5
+        },
+        shadowOpacity: 0.75,
+        shadowRadius: 5,
+        elevation: 9
     },
     loginText: {
-        color: 'white',
+        color: '#fff',
         fontWeight: 'bold'
     }
 });
