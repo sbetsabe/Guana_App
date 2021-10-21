@@ -14,9 +14,9 @@ import settings from '../assets/settings.png';
 import search from '../assets/search.png';
 import calendar from '../assets/calendar.png';
 
-const Main = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab }) => {
+const Feed = ({ drawerAnimationStyle, navigation, selectedTab, setSelectedTab }) => {
     React.useEffect(() => {
-        setSelectedTab('Menú Principal')
+        setSelectedTab('Panel')
     }, [])
     return (
         <Animated.View style={{
@@ -126,7 +126,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Feed);
 
 const deviceWidth = Math.round(Dimensions.get('window').width);
 

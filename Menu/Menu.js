@@ -10,7 +10,7 @@ import calendar from '../assets/calendar.png';
 import settings from '../assets/settings.png';
 import logout from '../assets/logout.png';
 
-import Main from "../View/Main";
+import Feed from "../View/Feed";
 import Search from "../View/Search";
 import Wishlist from "../View/Wishlist";
 import Setting from "../View/Setting";
@@ -29,7 +29,7 @@ const CustomDrawerItem = ({ label, icon, isFocused, onPress }) => {
             style={{
                 flexDirection: 'row',
                 height: 40,
-                width:200,
+                width: 200,
                 marginBottom: 10,
                 alignItems: 'center',
                 borderRadius: 8,
@@ -39,7 +39,7 @@ const CustomDrawerItem = ({ label, icon, isFocused, onPress }) => {
             <Image
                 source={icon}
                 style={{
-                    marginLeft:8,
+                    marginLeft: 8,
                     width: 20,
                     height: 20,
                     tintColor: 'white'
@@ -104,12 +104,20 @@ const CustomDrawerContent = ({ navigation, selectedTab, setSelectedTab }) => {
                     flex: 1, marginTop: 10
                 }}>
                     <CustomDrawerItem
-                        label={'Menú Principal'}
+                        label={'Panel'}
                         icon={homeicon}
-                        isFocused={selectedTab == 'Menú Principal'}
+                        isFocused={selectedTab == 'Panel'}
                         onPress={() => {
-                            setSelectedTab('Menú Principal');
-                            navigation.navigate('Main');
+                            setSelectedTab('Panel');
+                            navigation.navigate('Feed');
+                        }} />
+                    <CustomDrawerItem
+                        label={'Lista de deseos'}
+                        icon={calendar}
+                        isFocused={selectedTab == 'Lista de deseos'}
+                        onPress={() => {
+                            setSelectedTab('Lista de deseos');
+                            navigation.navigate('Wishlist');
                         }} />
                     <CustomDrawerItem
                         label={'Buscar Horas'}
@@ -120,14 +128,6 @@ const CustomDrawerContent = ({ navigation, selectedTab, setSelectedTab }) => {
                             navigation.navigate('Search');
                         }} />
                     <CustomDrawerItem
-                        label={'Lista de deseos'}
-                        icon={calendar}
-                        isFocused={selectedTab == 'Lista de deseos'}
-                        onPress={() => {
-                            setSelectedTab('Lista de deseos');
-                            navigation.navigate('Wishlist');
-                        }} />
-                        <CustomDrawerItem
                         label={'Ajustes'}
                         icon={settings}
                         isFocused={selectedTab == 'Ajustes'}
@@ -195,12 +195,12 @@ const Menu = ({ selectedTab, setSelectedTab }) => {
                             setSelectedTab={setSelectedTab} />
                     )
                 }}>
-                <Drawer.Screen name="Main">
-                    {props => (<Main {...props}
+                <Drawer.Screen name="Feed">
+                    {props => (<Feed {...props}
                         drawerAnimationStyle={animatedStyle} />)}
                 </Drawer.Screen>
-                <Drawer.Screen name="Hours">
-                    {props => (<Hours {...props}
+                <Drawer.Screen name="Wishlist">
+                    {props => (<Wishlist {...props}
                         drawerAnimationStyle={animatedStyle} />)}
                 </Drawer.Screen>
                 <Drawer.Screen name="Search">
@@ -215,7 +215,7 @@ const Menu = ({ selectedTab, setSelectedTab }) => {
                     {props => (<Profile {...props}
                         drawerAnimationStyle={animatedStyle} />)}
                 </Drawer.Screen>
-                
+
             </Drawer.Navigator>
 
         </View>
